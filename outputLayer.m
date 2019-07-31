@@ -1,2 +1,3 @@
-function y=outputLayer(H,W)
-y=H(:)'*W(:);
+function y=outputLayer(H,W,q)
+W=reshape(W,[],q);
+y=H(:)'*W;
