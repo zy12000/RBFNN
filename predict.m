@@ -9,7 +9,7 @@ W1=reshape(X(index(1):index(2)-1),W1_size);
 W2=reshape(X(index(2):index(3)-1),W2_size);
 W3=reshape(X(index(3):index(4)-1),W3_size);
 C=reshape(X(index(4):end),C_size);
-y=zeros(n,1);
+y=zeros(n,q);
 for i=1:n
-    y(i)=feedForward(m,p,q,W1,W2,W3,C,input(i,:));
+    y(i,:)=feedForward(m,p,q,W1,W2,W3,C,input(i,:));
 end
